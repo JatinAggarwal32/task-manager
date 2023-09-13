@@ -1,0 +1,246 @@
+/* Reset some default styles */
+body, h1, h3, p, ul, li, button, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, sans-serif;
+}
+h3{
+    text-align: center;
+}
+
+/* Global styles */
+/* html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: linear-gradient(
+        21deg,
+        rgba(64, 83, 206, 0.3697003234675773) 68%,
+        rgba(255, 206, 196, 0.5) 163%
+    ),
+    linear-gradient(
+        163deg,
+        rgba(49, 146, 170, 0.07944489965716128) 86%,
+        rgba(239, 112, 138, 0.5) 40%
+    ),
+    linear-gradient(30deg, rgba(76, 79, 173, 0.6173675716587805) 22%, rgba(237, 106, 134, 0.5) 169%),
+    linear-gradient(48deg, rgba(31, 85, 147, 0.7323890641868473) 64%, rgba(247, 126, 132, 0.5) 43%);
+    background-blend-mode: overlay, multiply, color, normal;
+} */
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 8s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#search-input{
+    width: 150px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 55px;
+    box-shadow: 0 10 20px rgba(0, 0, 0, 0.1);
+
+}
+input[type="date"]
+{
+    width:100px;
+}
+input[type="text"]{
+    width: 300px;
+}
+select{
+    width:100px;
+}
+button#sort-by-due-date{
+    width:100px;
+}
+button#sort-by-completion{
+    width:150px;
+}
+button#sort-by-category{
+    width:140px;
+}
+input[type="submit"],
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 55px;
+    background-color: unset;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+/* Task list styles */
+.list {
+    margin-top: 20px;
+}
+
+.list h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.task {
+    margin: 10px 0;
+    padding: 20px;
+    background-color: unset;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.task.completed {
+    background-color: #cfc;
+}
+
+.content {
+    flex-grow: 1;
+    color: #240909;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.text {
+    width: 100%;
+    border: none;
+    background-color: white;
+    font-size: 18px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button.edit,
+button.complete,
+button.delete {
+    padding: 7px 13px;
+    margin-left: 5px;
+    border: none;
+    border-radius:50px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Filter and search styles */
+#filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#filter-category,
+#search-input {
+    flex-grow: 1;
+}
+
+#filter-button,
+#search-button {
+    margin-left: 10px;
+}
+
+/* Sorting controls styles */
+#sorting-controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#sorting-controls button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 55px;
+    background-color: unset;
+    color: #fff;
+    cursor: pointer;
+}
+#filter-category{
+    width: auto;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select {
+        width: 100%;
+    }
+
+    .task {
+        flex-direction: column;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+}
+
+#clock {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 900px;
+    font-size: 30px;
+    margin-bottom: 40px;
+}

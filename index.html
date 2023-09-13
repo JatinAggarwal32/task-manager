@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="card-container">
+        
+    <header>
+    <h1>Task Manager <div id="clock"></div></h1>
+    
+    <form id="f1">
+        <input type="text" id="inf" placeholder="Enter the task...">
+    
+        <input type="date" id="date" required>
+        <select id="category" required>
+            <option value="Office">Office</option>
+            <option value="Home">Home</option>
+            <option value="Extra">Extra</option>
+        </select>
+        <input type="submit" id="tasksubmit" value="Add Task">
+        
+    </form>
+</header>
+<div class="container">
+    <div id = "filter-container">
+        <select id="filter-category">
+            <option value="all">All</option>
+            <option value="Office">Office</option>
+            <option value="Home">Home</option>
+            <option value="Extra">Extra</option>
+        </select>
+        <button id="filter-button">Filter</button>
+    
+    
+    <div class="search">
+        <input type="text" id="search-input" placeholder="Search tasks...">
+        <button id="search-button">Search</button>
+
+    </div>
+    </div>
+      
+    
+    
+    <div id="sorting-controls">
+        <button id="sort-by-due-date">Sort by Due Date</button>
+        <button id="sort-by-completion">Sort by Completion</button>
+        <button id="sort-by-category">Sort by Category</button>
+    </div>
+    
+        <main>
+        <section class="list">
+        <section class="list">
+            
+            <div id="tasks">
+                
+                
+            <!-- <div class="task">
+            <div class="content"> 
+                <input type="text" class="text" readonly>
+            </div>
+            <div class="actions">
+            <button class="edit">Edit</button>
+              <button class="complete">Complete</button>
+            <button class="delete">Delete</button>
+    
+            </div>
+            </div> -->
+        </div>
+        </section>
+        </main>
+    
+        <script src="script.js"></script>
+</div>
+</div>
+
+</body>
+</html>
